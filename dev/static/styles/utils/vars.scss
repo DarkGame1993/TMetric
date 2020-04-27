@@ -1,0 +1,43 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+$gray-200: #EBEDF0;
+$gray-300: #E2E7EB;
+$gray-400: #D0D6DB;
+$gray-500: #A1A7B3;
+$gray-600: #777E85;
+$gray-700: #4C5157;
+$gray-800: #34393D;
+$success: #17C22E;
+$primary: #3070F0;
+$dangerous: #db3333;
+$activityChartBackground: #F2F5FC;
+// Sizes
+$base-font-size: 10px;
+
+$breakpoints: (
+  "phone-small"    : 320px,
+  "phone"          : 420px,
+  "phone-wide"     : 480px,
+  "phablet"        : 560px,
+  "tablet-small"   : 640px,
+  "tablet"         : 768px,
+  "tablet-middle"  : 960px,
+  "tablet-wide"    : 1024px,
+  "content-size"   : 1140px,
+  "desktop"        : 1248px,
+  "desktop-1320"   : 1320px,
+  "desktop-wide"   : 1440px,
+  "desktop-1490"   : 1490px,
+  "desktop-middle" : 1600px,
+  "desktop-1750"   : 1750px,
+  "desktop-max"    : 1860px,
+  "tv-2100"        : 2100px
+);
+
+
+$phone-size: 320px;
+$tablet-size: 768px;
+$tablet-wide-size: 1024px;
+$desktop-size: 1248px;
+$content-size: 1400px;

@@ -1,0 +1,71 @@
+@mixin size($a,$b: $a) {
+  width: $a;
+  height: $b;
+}
+
+
+@mixin animation-arrow($start) {
+  &:hover .arrow{
+    animation: animate-arrow 1.2s ease-in-out infinite 0.3s;
+  }
+  @keyframes animate-arrow {
+    0%{transform:translateX($start);opacity: 0;}
+    80%{transform:translateX(0px);opacity: 1;}
+    100%{transform:translateX(30px);opacity: 0;}
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+//media query
+@mixin phone {
+  @media (min-width: #{$phone-size}) and (max-width: #{$tablet-size - 1px}) {
+    @content;
+  }
+}
+@mixin min-768 {
+  @media screen and (min-width: #{$tablet-size}) {
+    @content;
+  }
+}
+@mixin min-1024 {
+  @media screen and (min-width: #{$desktop-size}) {
+    @content;
+  }
+}
+@mixin min-1248 {
+  @media screen and (min-width: #{$desktop-size}) {
+    @content;
+  }
+}
+@mixin min-1440 {
+  @media screen and (min-width: #{$content-size}) {
+    @content;
+  }
+}
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  }
+}

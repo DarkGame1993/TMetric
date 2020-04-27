@@ -1,0 +1,10 @@
+/node_modules
+/.idea
+.idea
+/dist
+/docs
+/.git
+*.map
+*.rar
+*.zip
+package-lock.json

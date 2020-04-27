@@ -1,0 +1,18 @@
+//Top Bar
+.top-bar {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  position: relative;
+  z-index: 2;
+
+  &__title {
+    text-align: left;
+
+    h1 {
+      color: $gray-800;
+      font-style: normal;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<!--Start Login-->
+section.login
+    .login__body
+        .login__header.header
+            a.header__logo(href='#' target='_blank')
+                img(src='static/images/content/log-in/TM_logo.svg' alt='Logo')
+            .header__log-into Log Into TMetric
+        form(action='#' method='get').login__contact-form.contact-form
+            .contact-form__row
+                .contact-form__input.input-email
+                    .contact-form__label Email address
+                    input(autocomplete='off' type='email' required name='email' placeholder='rileyreid@email.com')
+            .contact-form__row
+                .contact-form__input.input-password
+                    .contact-form__label Password
+                    .input-password__field
+                        input.show-pass(autocomplete='off' size="30" type='password' required name='password' placeholder='1234')
+                        .contact-form__show-password
+                            img(src='static/images/content/log-in/eye.png' alt='Show')
+            .contact-form__row
+                a(href='#').contact-form__forgot.btn-form.btn-form_primary Forgot password?
+            .contact-form__btn-login
+                button(type='submit') Log In
+            .contact-form__btn-login-google
+                button(type='submit')
+                    img(src='static/images/content/log-in/logo_google.png' alt='Google')
+                    | Log In with Google
+            .contact-form__row
+                a(href='#').contact-form__sing-up.btn-form.btn-form_primary Sign Up
+
+<!--End Login-->

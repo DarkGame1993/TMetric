@@ -1,0 +1,203 @@
+/* Login */
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  /* .login__body */
+  &__body {
+    background: $white;
+    border: 1px solid $gray-400;
+    box-sizing: border-box;
+    border-radius: 6px;
+    max-width: 446px;
+    width: 100%;
+  }
+
+  /* .login__header */
+  &__header {
+    padding-top: 39px;
+    padding-bottom: 24px;
+    border-radius: 5px 5px 0 0;
+    @include respond-between("phone-small", "tablet") {
+      padding-top: 24px;
+    }
+  }
+
+  /* .login__contact-form */
+  &__contact-form {
+    background: $white;
+    padding: 31px 40px 35px 40px;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+.header {
+  background: $activityChartBackground;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  /* .header__logo */
+  &__logo {
+    margin-bottom: 25px;
+
+    img {
+      width: 160px;
+      height: 44px;
+      object-fit: revert;
+    }
+  }
+
+  /* .header__log-into */
+  &__log-into {
+    font-style: normal;
+    font-size: 28px;
+    line-height: 36px;
+    color: $gray-800;
+  }
+}
+
+.contact-form {
+  /* .contact-form__input */
+  &__input {
+    input {
+      width: 100%;
+      border: 1px solid $gray-400;
+      box-sizing: border-box;
+      border-radius: 6px;
+      color: $gray-800;
+      padding: 8px 12px;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 20px;
+
+      &::placeholder {
+        color: $gray-500;
+      }
+    }
+  }
+
+  /* .contact-form__label */
+  &__label {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-800;
+    margin-bottom: 2px;
+  }
+
+  /* .contact-form__show-password */
+  &__show-password {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  /* .contact-form__forgot */
+  &__forgot {
+    text-align: left;
+    margin-bottom: 24px;
+    display: flex;
+  }
+
+  /* .contact-form__btn-login */
+  &__btn-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button {
+      background: $primary;
+      border-radius: 6px;
+      outline: 0;
+      border: 0;
+      width: 100%;
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $white;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  &__btn-login-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom: 56px;
+    @include respond-between("phone-small", "tablet") {
+      margin-bottom: 24px;
+    }
+
+    button {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      width: 100%;
+      cursor: pointer;
+      outline: 0;
+      border-radius: 4px;
+      background: $white;
+      border: 1px solid $gray-400;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.21875px;
+      color: rgba(0, 0, 0, 0.54);
+
+      img {
+        width: 18px;
+        height: 18px;
+        object-fit: cover;
+        margin-right: 14px;
+      }
+    }
+  }
+
+  /* .contact-form__sing-up */
+  &__sing-up {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.btn-form {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+
+  &_primary {
+    color: $primary;
+  }
+}
+
+.input-password {
+  margin-bottom: 12px;
+
+  &__field {
+    position: relative;
+
+    input {
+      padding-right: 33px;
+    }
+  }
+}
+
+.input-email {
+  margin-bottom: 18px;
+}
